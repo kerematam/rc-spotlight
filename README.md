@@ -1,6 +1,6 @@
 # react-lightbox-wrapper
 
-> It is wrapper to give lightbox effect to component.
+> It is wrapper to give lightbox effect to the react components.
 
 [![NPM](https://img.shields.io/npm/v/react-lightbox-wrapper.svg)](https://www.npmjs.com/package/react-lightbox-wrapper) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -15,12 +15,14 @@ npm install --save react-lightbox-wrapper
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'react-lightbox-wrapper'
+import LightboxWrapper from 'react-lightbox-wrapper'
 
 class Example extends Component {
   render () {
     return (
-      <MyComponent />
+      <LightboxWrapper isActive>
+        <div>Content with Lightbox Effect</div>
+      </LightboxWrapper>
     )
   }
 }

@@ -1,7 +1,7 @@
-import ExampleComponent from './'
+import LightboxComponent from './'
 
-describe('ExampleComponent', () => {
+describe('LightboxComponent', () => {
   it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
+    expect(LightboxComponent).toBeTruthy()
   })
 })

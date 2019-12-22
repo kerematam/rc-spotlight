@@ -1,22 +1,48 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
+import Shadow from "./Shadow";
 
-import styles from './styles.css'
+import styles from "./styles.css";
 
-export default class ExampleComponent extends Component {
-  static propTypes = {
-    text: PropTypes.string
-  }
+const LightboxWrapper = ({
+  isActive,
+  shadowZIndex,
+  shadowOpacity,
+  shadowColor,
+  children,
+  renderOnShadow
+}) => {
+  const StyledChildren = () =>
+    React.Children.map(children, child =>
+      React.cloneElement(child, {
+        className: `${child.props.className} ${styles.component}`
+      })
+    );
 
-  render() {
-    const {
-      text
-    } = this.props
+  return isActive ? (
+    <React.Fragment>
+      <StyledChildren
+        style={{
+          ...(shadowZIndex && { "z-index": (+shadowZIndex + 1).toString() })
+        }}
+      />
+      <Shadow
+        shadowZIndex={shadowZIndex}
+        shadowOpacity={shadowOpacity}
+        shadowColor={shadowColor}
+        renderOnShadow={renderOnShadow}
+      />
+    </React.Fragment>
+  ) : (
+    children
+  );
+};
 
-    return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
-    )
-  }
-}
+LightboxWrapper.propTypes = {
+  shadowZIndex: PropTypes.string,
+  shadowOpacity: PropTypes.string,
+  shadowColor: PropTypes.string,
+  renderOnShadow: PropTypes.node
+};
+
+export default LightboxWrapper;
