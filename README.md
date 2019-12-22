@@ -10,6 +10,10 @@
 npm install --save react-lightbox-wrapper
 ```
 
+## Demo
+
+![Image description](docs/images/showcase.gif)
+
 ## Usage
 
 ```jsx
