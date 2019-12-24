@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Shadow from "./Shadow";
+import Portal from "./Portal";
 
 import styles from "./styles.css";
 
@@ -26,12 +27,14 @@ const LightboxWrapper = ({
           ...(shadowZIndex && { "z-index": (+shadowZIndex + 1).toString() })
         }}
       />
-      <Shadow
-        shadowZIndex={shadowZIndex}
-        shadowOpacity={shadowOpacity}
-        shadowColor={shadowColor}
-        renderOnShadow={renderOnShadow}
-      />
+      <Portal>
+        <Shadow
+          shadowZIndex={shadowZIndex}
+          shadowOpacity={shadowOpacity}
+          shadowColor={shadowColor}
+          renderOnShadow={renderOnShadow}
+        />
+      </Portal>
     </React.Fragment>
   ) : (
     children
