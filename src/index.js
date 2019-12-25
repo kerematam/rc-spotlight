@@ -42,6 +42,7 @@ const LightboxWrapper = ({
 };
 
 LightboxWrapper.propTypes = {
+  isActive: PropTypes.bool,
   shadowZIndex: PropTypes.string,
   shadowOpacity: PropTypes.string,
   shadowColor: PropTypes.string,

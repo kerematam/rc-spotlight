@@ -17,20 +17,30 @@ npm install --save react-lightbox-wrapper
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-import LightboxWrapper from 'react-lightbox-wrapper'
+import LightboxWrapper from "react-lightbox-wrapper";
 
 class Example extends Component {
-  render () {
+  render() {
     return (
-      <LightboxWrapper isActive>
+      <LightboxWrapper isActive renderOnShadow={<h1>This is shadow view</h1>}>
         <div>Content with Lightbox Effect</div>
       </LightboxWrapper>
-    )
+    );
   }
 }
 ```
+
+## Properties
+
+| Property       | Description                                                                | Type         | Default                           |
+| -------------- | -------------------------------------------------------------------------- | ------------ | --------------------------------- |
+| isActive       | Weather the component is enabled or disabled.                              | Boolean      | false                             |
+| renderOnShadow | Component(s) to be rendered over shadow.                                   | ReactNode(s) | null                              |
+| shadowZIndex   | Z index of shadow. It will override the css class style with inline style. | Number       | null (css class style: "1000")    |
+| shadowColor    | Color of shadow. It will override the css class style with inline style.   | String       | null (css class style: "#000000") |
+| shadowOpacity  | Opacity of shadow. It will override the css class style with inline style  | Number       | null (css class style: 0.7)       |
 
 ## License
 

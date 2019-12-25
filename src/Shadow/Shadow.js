@@ -36,7 +36,7 @@ const Shadow = ({
 
 Shadow.propTypes = {
   shadowZIndex: PropTypes.string,
-  shadowOpacity: PropTypes.string,
+  shadowOpacity: PropTypes.number,
   shadowColor: PropTypes.string,
   renderOnShadow: PropTypes.node
 };
