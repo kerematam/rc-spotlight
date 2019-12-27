@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Shadow from "./Shadow";
 import Portal from "./Portal";
+import YOLO from "./YOLO";
 
 import styles from "./styles.css";
 
@@ -27,14 +28,16 @@ const LightboxWrapper = ({
           ...(shadowZIndex && { "z-index": (+shadowZIndex + 1).toString() })
         }}
       />
-      <Portal>
-        <Shadow
-          shadowZIndex={shadowZIndex}
-          shadowOpacity={shadowOpacity}
-          shadowColor={shadowColor}
-          renderOnShadow={renderOnShadow}
-        />
-      </Portal>
+      <YOLO>
+        <Portal>
+          <Shadow
+            shadowZIndex={shadowZIndex}
+            shadowOpacity={shadowOpacity}
+            shadowColor={shadowColor}
+            renderOnShadow={renderOnShadow}
+          />
+        </Portal>
+      </YOLO>
     </React.Fragment>
   ) : (
     children
