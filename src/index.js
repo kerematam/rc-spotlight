@@ -49,7 +49,11 @@ LightboxWrapper.propTypes = {
   shadowZIndex: PropTypes.string,
   shadowOpacity: PropTypes.string,
   shadowColor: PropTypes.string,
-  renderOnShadow: PropTypes.node
+  renderOnShadow: PropTypes.node,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ])
 };
 
 export default LightboxWrapper;
