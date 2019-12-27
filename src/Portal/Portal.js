@@ -15,6 +15,7 @@ class Portal extends React.Component {
   }
 
   componentWillUnmount() {
+    ReactDOM.unmountComponentAtNode(this.el);
     body.removeChild(this.el);
   }
 
