@@ -1,6 +1,6 @@
 {
-  "name": "react-lightbox-wrapper-example",
-  "homepage": "https://kerematam.github.io/react-lightbox-wrapper",
+  "name": "rc-spotlight-example",
+  "homepage": "https://kerematam.github.io/rc-spotlight",
   "version": "0.0.0",
   "license": "MIT",
   "private": true,
@@ -9,7 +9,7 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "^1.1.4",
-    "react-lightbox-wrapper": "file:.."
+    "rc-spotlight": "file:.."
   },
   "scripts": {
     "start": "react-scripts start",

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Spotlight from "react-lightbox-wrapper";
+import Spotlight from "rc-spotlight";
 
 import "./index.css";
 

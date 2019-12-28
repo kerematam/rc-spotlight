@@ -1,6 +1,6 @@
 {
-  "short_name": "react-lightbox-wrapper",
-  "name": "react-lightbox-wrapper",
+  "short_name": "rc-spotlight",
+  "name": "rc-spotlight",
   "start_url": "./index.html",
   "display": "standalone",
   "theme_color": "#000000",

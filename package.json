@@ -1,10 +1,10 @@
 {
-  "name": "react-lightbox-wrapper",
+  "name": "rc-spotlight",
   "version": "1.0.0",
   "description": "It is wrapper to give lightbox effect to component.",
   "author": "kerematam",
   "license": "MIT",
-  "repository": "kerematam/react-lightbox-wrapper",
+  "repository": "kerematam/rc-spotlight",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
