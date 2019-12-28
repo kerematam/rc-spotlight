@@ -1,9 +1,9 @@
-.shadow_container {
+.backdrop_container {
   z-index: 1000;
   position: relative;
 }
 
-.shadow_content {
+.backdrop_content {
   z-index: 1000;
   position: fixed;
   height: 100%;
@@ -15,12 +15,12 @@
   justify-content: center;
 }
 
-.render_on_shadow {
+.render_on_backdrop {
   box-shadow: 0 0 10px 10px #ffffff;
   background: #ffffff;
 }
 
-.shadow {
+.backdrop {
   background-color: #000000;
   opacity: 0.7;
   position: fixed;

@@ -1,18 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Shadow from "./Shadow";
+import Backdrop from "./Backdrop";
 import Portal from "./Portal";
 import YOLO from "./YOLO";
 
 import styles from "./styles.css";
 
-const LightboxWrapper = ({
+const Spotlight = ({
   isActive,
-  shadowZIndex,
-  shadowOpacity,
-  shadowColor,
+  backdropZIndex,
+  backdropOpacity,
+  backdropColor,
   children,
-  renderOnShadow
+  renderOnBackdrop
 }) => {
   const StyledChildren = () =>
     React.Children.map(children, child =>
@@ -25,16 +25,16 @@ const LightboxWrapper = ({
     <React.Fragment>
       <StyledChildren
         style={{
-          ...(shadowZIndex && { "z-index": (+shadowZIndex + 1).toString() })
+          ...(backdropZIndex && { "z-index": (+backdropZIndex + 1).toString() })
         }}
       />
       <YOLO>
         <Portal>
-          <Shadow
-            shadowZIndex={shadowZIndex}
-            shadowOpacity={shadowOpacity}
-            shadowColor={shadowColor}
-            renderOnShadow={renderOnShadow}
+          <Backdrop
+            backdropZIndex={backdropZIndex}
+            backdropOpacity={backdropOpacity}
+            backdropColor={backdropColor}
+            renderOnBackdrop={renderOnBackdrop}
           />
         </Portal>
       </YOLO>
@@ -44,16 +44,16 @@ const LightboxWrapper = ({
   );
 };
 
-LightboxWrapper.propTypes = {
+Spotlight.propTypes = {
   isActive: PropTypes.bool,
-  shadowZIndex: PropTypes.string,
-  shadowOpacity: PropTypes.string,
-  shadowColor: PropTypes.string,
-  renderOnShadow: PropTypes.node,
+  backdropZIndex: PropTypes.string,
+  backdropOpacity: PropTypes.string,
+  backdropColor: PropTypes.string,
+  renderOnBackdrop: PropTypes.node,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ])
 };
 
-export default LightboxWrapper;
+export default Spotlight;
