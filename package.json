@@ -1,7 +1,7 @@
 {
   "name": "rc-spotlight",
   "version": "1.0.0",
-  "description": "It is wrapper to give lightbox effect to component.",
+  "description": "It is wrapper to give spotlight to component.",
   "author": "kerematam",
   "license": "MIT",
   "repository": "kerematam/rc-spotlight",

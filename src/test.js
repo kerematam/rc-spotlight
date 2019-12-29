@@ -1,7 +1,7 @@
-import LightboxComponent from './'
+import Spotlight from './'
 
-describe('LightboxComponent', () => {
+describe('SpotlightComponent', () => {
   it('is truthy', () => {
-    expect(LightboxComponent).toBeTruthy()
+    expect(Spotlight).toBeTruthy()
   })
 })

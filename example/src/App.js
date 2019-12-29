@@ -19,19 +19,19 @@ const App = () => {
         isActive={1 === backdropIndex}
         renderOnBackdrop={BackdropText("This is title")}
       >
-        <h1 className="header">Lightbox Wrapper</h1>
+        <h1 className="header">Spotlight</h1>
       </Spotlight>
       <Spotlight
         isActive={1 === backdropIndex}
         renderOnBackdrop={BackdropText("This is 2nd title")}
       >
-        <h1 className="header">Lightbox Wrapper</h1>
+        <h1 className="header">Spotlight 2</h1>
       </Spotlight>
       <Spotlight
         isActive={1 === backdropIndex}
         renderOnBackdrop={BackdropText("This is 3rd title")}
       >
-        <h1 className="header">Lightbox Wrapper</h1>
+        <h1 className="header">Spotlight 3</h1>
       </Spotlight>
       <Spotlight
         isActive={2 === backdropIndex}
