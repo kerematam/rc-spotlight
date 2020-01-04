@@ -17,7 +17,7 @@ const Spotlight = ({
   const StyledChildren = () =>
     React.Children.map(children, child =>
       React.cloneElement(child, {
-        className: `${child.props.className} ${styles.component}`
+        className: `${child.props && child.props.className} ${styles.component}`
       })
     );
 
