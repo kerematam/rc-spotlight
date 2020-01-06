@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const CreateYOLO = function() {
   let isShown = false;
-  
+
   return ({ children }) => {
     const [shouldMount, setShouldMount] = useState(false);
 
@@ -12,11 +12,10 @@ const CreateYOLO = function() {
         setShouldMount(true);
         isShown = true;
       }
+      return () => {
+        isShown = false;
+      };
     }, []);
-
-    useEffect(() => () => {
-      isShown = false;
-    });
 
     return shouldMount && children;
   };
