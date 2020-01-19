@@ -2,7 +2,9 @@
 
 > Spotlight component simply highlights the component(s) that it wraps.
 
-[![NPM](https://img.shields.io/npm/v/rc-spotlight.svg)](https://www.npmjs.com/package/rc-spotlight) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/rc-spotlight.svg)](https://www.npmjs.com/package/rc-spotlight) 
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
 ## Install
 
