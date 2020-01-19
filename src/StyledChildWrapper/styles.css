@@ -1,7 +1,5 @@
-.component {
+.childOverBackdrop {
   z-index: 1001;
   position: relative;
-  background-color: white;
   box-shadow: 0 0 10px 10px #ffffff;
 }
-

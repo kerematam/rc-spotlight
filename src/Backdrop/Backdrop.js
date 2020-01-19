@@ -9,11 +9,11 @@ const Backdrop = ({
   backdropColor,
   renderOnBackdrop
 }) => (
-  <div className={styles.backdrop_container} style={{}}>
+  <div className={styles.backdrop_container}>
     <div
       className={styles.backdrop_content}
       style={{
-        ...(backdropZIndex && { "z-index": backdropZIndex })
+        ...(backdropZIndex && { zIndex: backdropZIndex })
       }}
     >
       {renderOnBackdrop && (
@@ -35,7 +35,7 @@ const Backdrop = ({
 );
 
 Backdrop.propTypes = {
-  backdropZIndex: PropTypes.string,
+  backdropZIndex: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   backdropOpacity: PropTypes.number,
   backdropColor: PropTypes.string,
   renderOnBackdrop: PropTypes.node
