@@ -1,5 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Portal from "../Portal";
+import YOLO from "../YOLO";
 
 import styles from "./styles.css";
 
@@ -20,17 +22,21 @@ const Backdrop = ({
         <div className={styles.render_on_backdrop}>{renderOnBackdrop}</div>
       )}
     </div>
-    <div
-      className={styles.backdrop}
-      style={{
-        ...(backdropOpacity && {
-          opacity: backdropOpacity
-        }),
-        ...(backdropColor && {
-          "background-color": backdropColor
-        })
-      }}
-    />
+    <YOLO>
+      <Portal>
+        <div
+          className={styles.backdrop}
+          style={{
+            ...(backdropOpacity && {
+              opacity: backdropOpacity
+            }),
+            ...(backdropColor && {
+              "background-color": backdropColor
+            })
+          }}
+        />
+      </Portal>
+    </YOLO>
   </div>
 );
 

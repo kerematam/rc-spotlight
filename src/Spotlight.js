@@ -2,8 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
 import Backdrop from "./Backdrop";
-import Portal from "./Portal";
-import YOLO from "./YOLO";
 import StyledChildWrapper from "./StyledChildWrapper";
 
 const Spotlight = ({
@@ -29,16 +27,12 @@ const Spotlight = ({
           {child}
         </StyledChildWrapper>
       ))}
-      <YOLO>
-        <Portal>
-          <Backdrop
-            backdropZIndex={backdropZIndex}
-            backdropOpacity={backdropOpacity}
-            backdropColor={backdropColor}
-            renderOnBackdrop={renderOnBackdrop}
-          />
-        </Portal>
-      </YOLO>
+      <Backdrop
+        backdropZIndex={backdropZIndex}
+        backdropOpacity={backdropOpacity}
+        backdropColor={backdropColor}
+        renderOnBackdrop={renderOnBackdrop}
+      />
     </React.Fragment>
   ) : (
     children
