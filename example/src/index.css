@@ -3,6 +3,11 @@ body {
 }
 
 .header {
-  font-family: monospace;
-  background-color: blue;
+  background-color: #c1e1d2;
+}
+
+.container {
+  margin-left: 15%;
+  margin-right: 15%;
+  font-family: Ubuntu;
 }
