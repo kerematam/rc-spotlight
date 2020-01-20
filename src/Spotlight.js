@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
 import Backdrop from "./Backdrop";
@@ -14,10 +14,10 @@ const Spotlight = ({
   renderOnBackdrop,
   inheritParentBackgroundColor,
   children
-}) => {
-  const StyledChildren = () =>
-    React.Children.map(children, child => {
-      return (
+}) =>
+  isActive ? (
+    <React.Fragment>
+      {React.Children.map(children, child => (
         <StyledChildWrapper
           inheritParentBackgroundColor={inheritParentBackgroundColor}
           style={{
@@ -28,12 +28,7 @@ const Spotlight = ({
         >
           {child}
         </StyledChildWrapper>
-      );
-    });
-
-  return isActive ? (
-    <React.Fragment>
-      <StyledChildren />
+      ))}
       <YOLO>
         <Portal>
           <Backdrop
@@ -48,7 +43,6 @@ const Spotlight = ({
   ) : (
     children
   );
-};
 
 Spotlight.propTypes = {
   isActive: PropTypes.bool,

@@ -12,6 +12,7 @@ const retrieveBgColor = node => {
     .getPropertyValue("background-color");
   const hasNodeBgColor =
     bgColor.split(",").length === 4 && bgColor.split(",")[3].trim() === "0)";
+    
   return hasNodeBgColor ? retrieveBgColor(node.parentNode) : bgColor;
 };
 
