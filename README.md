@@ -38,7 +38,7 @@ class Example extends Component {
 
 | Property         | Description                                                                    | Type         | Default                           |
 | ---------------- | -------------------------------------------------------------------------------| ------------ | --------------------------------- |
-| isActive         | Weather the component is enabled or disabled.                                  | Boolean      | false                             |
+| isActive         | Wether the component is enabled or disabled.                                  | Boolean      | false                             |
 | children         | Component(s) to have spotlight effect                                          | Node(s)      | null                              |
 | renderOnBackdrop | Component(s) to be rendered over backdrop.                                     | ReactNode(s) | null                              |
 | backdropZIndex   | Z index of backdrop. It will override the css class style with inline style.   | Number or String       | "1000"                            |
