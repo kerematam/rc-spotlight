@@ -11,19 +11,19 @@ const Backdrop = ({
   backdropColor,
   renderOnBackdrop
 }) => (
-  <div className={styles.backdrop_container}>
-    <div
-      className={styles.backdrop_content}
-      style={{
-        ...(backdropZIndex && { zIndex: backdropZIndex })
-      }}
-    >
-      {renderOnBackdrop && (
-        <div className={styles.render_on_backdrop}>{renderOnBackdrop}</div>
-      )}
-    </div>
-    <YOLO>
-      <Portal>
+  <Portal>
+    <div className={styles.backdrop_container}>
+      <div
+        className={styles.backdrop_content}
+        style={{
+          ...(backdropZIndex && { zIndex: backdropZIndex })
+        }}
+      >
+        {renderOnBackdrop && (
+          <div className={styles.render_on_backdrop}>{renderOnBackdrop}</div>
+        )}
+      </div>
+      <YOLO>
         <div
           className={styles.backdrop}
           style={{
@@ -35,9 +35,9 @@ const Backdrop = ({
             })
           }}
         />
-      </Portal>
-    </YOLO>
-  </div>
+      </YOLO>
+    </div>
+  </Portal>
 );
 
 Backdrop.propTypes = {
