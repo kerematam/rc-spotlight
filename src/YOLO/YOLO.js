@@ -2,18 +2,18 @@ import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 const CreateYOLO = function() {
-  let isShown = false;
+  let count = 0;
 
   return ({ children }) => {
     const [shouldMount, setShouldMount] = useState(false);
 
     useEffect(() => {
-      if (!isShown) {
+      count++;
+      if (count === 1) {
         setShouldMount(true);
-        isShown = true;
       }
       return () => {
-        isShown = false;
+        count--;
       };
     }, []);
 
