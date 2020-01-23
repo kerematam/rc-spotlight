@@ -23,7 +23,6 @@ const CreateYOLO = function() {
           wakeArr.splice(index, 1);
         }
         if (count > 0) {
-          console.log("WAKE!");
           wakeArr[0](true);
         }
       };
