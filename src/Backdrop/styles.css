@@ -5,18 +5,18 @@
 
 .backdrop_content {
   z-index: 1000;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  /* height: 100%;
+  width: 100%; */
+  /* top: 0;
+  left: 0; */
+  /* display: flex;
+  align-items: flex-end;
+  justify-content: flex-end; */
 }
 
 .render_on_backdrop {
-  box-shadow: 0 0 10px 10px #ffffff;
+  /* box-shadow: 0 0 10px 10px #ffffff; */
   background: #ffffff;
 }
 

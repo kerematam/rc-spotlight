@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
 import Backdrop from "./Backdrop";
 import StyledChildWrapper from "./StyledChildWrapper";
+import Portal from "./Portal";
+import styles from "./styles.css";
 
 const Spotlight = ({
   isActive,
@@ -27,6 +29,8 @@ const Spotlight = ({
           {child}
         </StyledChildWrapper>
       ))}
+
+
       <Backdrop
         backdropZIndex={backdropZIndex}
         backdropOpacity={backdropOpacity}

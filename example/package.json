@@ -5,11 +5,14 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.8.3",
+    "antd": "^3.26.7",
     "prop-types": "^15.6.2",
+    "rc-spotlight": "file:..",
     "react": "file:../node_modules/react/",
     "react-dom": "^16.4.1",
     "react-scripts": "^1.1.4",
-    "rc-spotlight": "file:.."
+    "typeface-roboto": "0.0.75"
   },
   "scripts": {
     "start": "react-scripts start",
