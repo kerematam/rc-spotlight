@@ -12,10 +12,9 @@ const CreateYOLO = function() {
       count++;
       if (count === 1) {
         setShouldMount(true);
-      } else {
-        wakeArr.push(setShouldMount);
       }
 
+      wakeArr.push(setShouldMount);
       return () => {
         count--;
         const index = wakeArr.indexOf(setShouldMount);
