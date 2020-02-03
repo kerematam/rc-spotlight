@@ -6,45 +6,30 @@ import YOLO from "../YOLO";
 import styles from "./styles.css";
 
 const Backdrop = ({
-  backdropZIndex,
-  backdropOpacity,
-  backdropColor,
-  renderOnBackdrop
+  zIndex,
+  opacity,
+  color,
 }) => (
-  <Portal>
-    <div className={styles.backdrop_container}>
-      <div
-        className={styles.backdrop_content}
-        style={{
-          ...(backdropZIndex && { zIndex: backdropZIndex })
-        }}
-      >
-        {renderOnBackdrop && (
-          <div className={styles.render_on_backdrop}>{renderOnBackdrop}</div>
-        )}
-      </div>
+    <Portal>
       <YOLO>
-        <div
-          className={styles.backdrop}
-          style={{
-            ...(backdropOpacity && {
-              opacity: backdropOpacity
-            }),
-            ...(backdropColor && {
-              "background-color": backdropColor
-            })
-          }}
-        />
+        <div className={styles.backdrop_container}>
+          <div
+            className={styles.backdrop}
+            style={{
+              ...(opacity && { opacity }),
+              ...(color && { "background-color": color }),
+              ...(zIndex && { zIndex })
+            }}
+          />
+        </div>
       </YOLO>
-    </div>
-  </Portal>
-);
+    </Portal>
+  )
 
 Backdrop.propTypes = {
-  backdropZIndex: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  zIndex: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   backdropOpacity: PropTypes.number,
   backdropColor: PropTypes.string,
-  renderOnBackdrop: PropTypes.node
 };
 
 export default Backdrop;
