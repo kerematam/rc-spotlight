@@ -28,8 +28,8 @@ const Backdrop = ({
 
 Backdrop.propTypes = {
   zIndex: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  backdropOpacity: PropTypes.number,
-  backdropColor: PropTypes.string,
+  opacity: PropTypes.number,
+  color: PropTypes.string,
 };
 
 export default Backdrop;

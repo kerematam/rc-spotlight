@@ -38,12 +38,17 @@ class Example extends Component {
 
 | Property         | Description                                                                    | Type         | Default                           |
 | ---------------- | -------------------------------------------------------------------------------| ------------ | --------------------------------- |
-| isActive         | Wether the component is enabled or disabled.                                  | Boolean      | false                             |
-| children         | Component(s) to have spotlight effect                                          | Node(s)      | null                              |
-| renderOnBackdrop | Component(s) to be rendered over backdrop.                                     | ReactNode(s) | null                              |
-| backdropZIndex   | Z index of backdrop. It will override the css class style with inline style.   | Number or String       | "1000"                            |
-| backdropColor    | Color of backdrop. It will override the css class style with inline style.     | String       | "#000000"                         | backdropOpacity  | Opacity of backdrop. It will override the css class style with inline style    | Number       | 0.7       |
-| inheritParentBackgroundColor (Experimental) | Resursively search for parent background color in case you dont want your component to inherit color of backdrop  | Bool       | false       |
+| isActive         | Whether the component is enabled or disabled.                                  | Boolean      | false                             |
+| children         | Component(s) to have spotlight effect.                                         | Node(s)      | null                              |
+| label            | Component(s) to be rendered over backdrop.                                     | ReactNode(s) | null                              |
+| zIndex           | Z index of backdrop and wrapped component. It will override the css class style with inline style. | Number or String | 1000      |
+| backdropColor    | Color of backdrop. It will override the css class style with inline style.     | String       | #000000                           |
+| backdropOpacity  | Opacity of backdrop. It will override the css class style with inline style.   | Number       | 0.7                               |
+| inheritParentBackgroundColor (Experimental) | Resursively search for parent background color in case you dont want your component to inherit color of backdrop.  | Boolean | false |
+| centerLabel      | Centers label of wrapped component.                                            | Boolean      | false                             |
+| enableShadow     | Gives shadow around wrapped component      .                                   | Boolean      | false                             |
+| labelStyle       | Inline style for label                                                         | Object       | null                              |
+| spotlightStyle   | Inline style for wrapped component when spotlight is actived                   | Object       | null                              |
 
 ## License
 

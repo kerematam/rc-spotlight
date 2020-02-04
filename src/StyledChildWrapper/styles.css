@@ -1,5 +1,8 @@
 .childOverBackdrop {
   z-index: 1001;
   position: relative;
+}
+
+.box_shadow {
   box-shadow: 0 0 10px 10px #ffffff;
 }
