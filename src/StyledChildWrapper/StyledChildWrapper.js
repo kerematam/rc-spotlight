@@ -51,7 +51,7 @@ class StyledChildWrapper extends React.Component {
 
       const classNames = [
         safeChild.props.className,
-        styles.childOverBackdrop,
+        styles.child_over_backdrop,
         enableShadow && styles.box_shadow
       ];
       const className = formatClassNames(classNames);
