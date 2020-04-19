@@ -12,16 +12,14 @@ const Backdrop = ({
 }) => (
     <Portal>
       <YOLO>
-        <div className={styles.backdrop_container}>
-          <div
-            className={styles.backdrop}
-            style={{
-              ...(opacity && { opacity }),
-              ...(color && { "background-color": color }),
-              ...(zIndex && { zIndex })
-            }}
-          />
-        </div>
+        <div
+          className={styles.backdrop}
+          style={{
+            ...(opacity && { opacity }),
+            ...(color && { "background-color": color }),
+            ...(zIndex && { zIndex })
+          }}
+        />
       </YOLO>
     </Portal>
   )
