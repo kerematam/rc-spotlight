@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
-import Spotlight from "rc-spotlight";
+import Spotlight, { LabelWrapper } from "rc-spotlight";
 
 import "./index.css";
 
-const BackdropText = text => (
-  <h1 style={{ fontFamily: "Ubuntu" }} className="backdrop-text">
-    {text}
-  </h1>
+const renderLabel = text => (
+  <LabelWrapper center>
+    <div className="backdrop-text">{text}</div>
+  </LabelWrapper>
 );
 
 const App = () => {
-  const [backdropIndex, setBackdropIndex] = useState(0);
+  const [backdropIndex, setBackdropIndex] = useState(1);
   const [input, setInput] = useState();
 
   useEffect(() => {
@@ -25,14 +25,14 @@ const App = () => {
     <div className="container">
       <Spotlight
         isActive={1 === backdropIndex}
-        renderOnBackdrop={BackdropText("This is title")}
+        renderLabel={renderLabel("This is title")}
       >
         <h1 className="header">Spotlight</h1>
       </Spotlight>
       <div>
         <Spotlight
           isActive={2 === backdropIndex}
-          renderOnBackdrop={BackdropText("This is subtitle")}
+          renderLabel={renderLabel("This is subtitle")}
           inheritParentBackgroundColor
         >
           <h2>You can NOT interact with DOMs under backdrop</h2>
@@ -40,7 +40,7 @@ const App = () => {
       </div>
       <Spotlight
         isActive={3 === backdropIndex}
-        renderOnBackdrop={BackdropText("This is text input")}
+        renderLabel={renderLabel("This is text input")}
       >
         <input
           value={input}

@@ -1,10 +1,10 @@
 .backdrop_content {
-  z-index: 1000;
+  z-index: 1001;
   position: absolute;
 }
 
 .backdrop_content_center {
-  z-index: 1000;
+  z-index: 1001;
   position: fixed;
   height: 100%;
   width: 100%;
@@ -14,3 +14,10 @@
   align-items: center;
   justify-content: center;
 }
+
+.render_on_backdrop {
+  background: #ffffff;
+  padding: 10px
+}
+
+

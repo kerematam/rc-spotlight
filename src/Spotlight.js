@@ -2,19 +2,16 @@ import React from "react";
 import PropTypes from "prop-types";
 import Backdrop from "./Backdrop";
 import StyledChildWrapper from "./StyledChildWrapper";
-import styles from "./styles.css";
 
 const Spotlight = ({
   children,
   isActive,
-  label,
+  renderLabel,
   zIndex,
   backdropOpacity,
   backdropColor,
   enableShadow,
-  centerLabel,
-  labelStyle,
-  spotlightStyle,
+  style,
   inheritParentBackgroundColor
 }) =>
   isActive ? (
@@ -27,23 +24,13 @@ const Spotlight = ({
             ...(zIndex && {
               zIndex: (+zIndex + 1).toString()
             }),
-            ...spotlightStyle
+            ...style
           }}
         >
           {child}
         </StyledChildWrapper>
       ))}
-      <div
-        className={
-          centerLabel ? styles.backdrop_content_center : styles.backdrop_content
-        }
-        style={{
-          ...(zIndex && { zIndex }),
-          ...labelStyle
-        }}
-      >
-        {label && <div className={styles.render_on_backdrop}>{label}</div>}
-      </div>
+      <div style={{ ...(zIndex && { zIndex }) }}>{renderLabel}</div>
       <Backdrop
         zIndex={zIndex}
         opacity={backdropOpacity}
@@ -60,15 +47,13 @@ Spotlight.propTypes = {
     PropTypes.node
   ]),
   isActive: PropTypes.bool,
-  label: PropTypes.node,
+  renderLabel: PropTypes.func,
   zIndex: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   backdropOpacity: PropTypes.string,
   backdropColor: PropTypes.string,
   enableShadow: PropTypes.bool,
-  centerLabel: PropTypes.bool,
-  labelStyle: PropTypes.object,
-  spotlightStyle: PropTypes.object,
-  inheritParentBackgroundColor: PropTypes.bool,
+  style: PropTypes.object,
+  inheritParentBackgroundColor: PropTypes.bool
 };
 
 export default Spotlight;
