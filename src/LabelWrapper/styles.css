@@ -1,23 +1,19 @@
 .backdrop_content {
   z-index: 1001;
   position: absolute;
+  padding: 5px;
+  background: white;
+
 }
 
 .backdrop_content_center {
   z-index: 1001;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 5px;
+  margin: 0;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%) 
 }
-
-.render_on_backdrop {
-  background: #ffffff;
-  padding: 10px
-}
-
-

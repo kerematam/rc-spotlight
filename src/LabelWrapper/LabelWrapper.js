@@ -13,8 +13,10 @@ const LabelWrapper = ({ children, style: styleProp, zIndex, center }) => {
   };
 
   return (
-    <div className={className} style={style}>
-      <div className={styles.render_on_backdrop}>{children}</div>
+    <div className={className}>
+      <div style={style}>
+        {children}
+      </div>
     </div>
   );
 };
