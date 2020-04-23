@@ -1,0 +1,20 @@
+@import '~antd/dist/antd.css';
+
+body {
+  margin: 20px;
+}
+
+.header {
+  background-color: #c1e1d2;
+}
+
+.backdrop-text  {
+ font-family: Ubuntu;
+ font-size: 32px;
+}
+
+.container {
+  margin-left: 15%;
+  margin-right: 15%;
+  font-family: Ubuntu;
+}

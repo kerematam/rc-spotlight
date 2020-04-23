@@ -5,11 +5,12 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "antd": "^4.1.4",
     "prop-types": "^15.6.2",
-    "react": "file:../node_modules/react/",
+    "rc-spotlight": "file:../..",
+    "react": "file:../../node_modules/react/",
     "react-dom": "^16.4.1",
-    "react-scripts": "^1.1.4",
-    "rc-spotlight": "file:.."
+    "react-scripts": "^1.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
