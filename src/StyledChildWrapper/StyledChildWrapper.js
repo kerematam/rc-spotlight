@@ -24,6 +24,10 @@ const retrieveBgColor = node => {
 };
 
 class StyledChildWrapper extends React.Component {
+  constructor(props) {
+    super(props);
+    this.ref = React.createRef();
+  }
 
   state = {
     backgroundColor: undefined
@@ -36,7 +40,7 @@ class StyledChildWrapper extends React.Component {
   componentDidMount() {
     const { inheritParentBackgroundColor } = this.props;
     if (inheritParentBackgroundColor) {
-      const node = ReactDOM.findDOMNode(this);
+      const node = this.ref.current;
       const bgColor = retrieveBgColor(node);
       this.setBackground(bgColor);
     }
@@ -63,7 +67,8 @@ class StyledChildWrapper extends React.Component {
           ...safeChild.props.style,
           ...(backgroundColor && { backgroundColor }),
           ...spotlightStyle
-        }
+        },
+        ref: this.ref
       });
     });
   }
@@ -76,7 +81,7 @@ StyledChildWrapper.propTypes = {
   ]),
   enableShadow: PropTypes.bool,
   spotlightStyle: PropTypes.object,
-  inheritParentBackgroundColor: PropTypes.bool,
+  inheritParentBackgroundColor: PropTypes.bool
 };
 
 export default StyledChildWrapper;
