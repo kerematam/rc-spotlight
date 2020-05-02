@@ -5,30 +5,43 @@ const CreateYOLO = function() {
   let count = 0;
   const wakeArr = [];
 
-  return ({ children }) => {
-    const [shouldMount, setShouldMount] = useState(false);
+  return class YOLO extends React.Component {
+    constructor(props) {
+      super(props);
+    }
 
-    useEffect(() => {
+    state = {
+      shouldMount: false
+    };
+
+    setShouldMount = shouldMount => {
+      this.setState({ shouldMount });
+    };
+
+    componentDidMount() {
       count++;
       if (count === 1) {
-        setShouldMount(true);
+        this.setShouldMount(true);
       }
+      wakeArr.push(this.setShouldMount);
+    }
 
-      wakeArr.push(setShouldMount);
-      return () => {
-        count--;
-        const index = wakeArr.indexOf(setShouldMount);
-        if (index > -1) {
-          wakeArr.splice(index, 1);
-        }
-        if (count > 0) {
-          wakeArr[0](true);
-        }
-      };
-    }, []);
+    componentWillUnmount() {
+      count--;
+      const index = wakeArr.indexOf(this.setShouldMount);
+      if (index > -1) {
+        wakeArr.splice(index, 1);
+      }
+      if (count > 0) {
+        wakeArr[0](true);
+      }
+    }
 
-    return shouldMount && children;
+    render() {
+      return this.state.shouldMount && this.props.children;
+    }
   };
+
 };
 
 const YOLO = CreateYOLO();
