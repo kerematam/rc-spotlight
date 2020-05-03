@@ -56,8 +56,7 @@ const App = () => (
 
 ![Image description](docs/images/showcase_antd.gif)
 
-
-Create Wrapper for Spotlight with Tooltip : 
+Create Wrapper for Spotlight with Tooltip :
 
 ```jsx
 const SpotlightWithTooltip = ({
@@ -79,13 +78,12 @@ const SpotlightWithTooltip = ({
     </Tooltip>
   );
 };
-
 ```
 
-And use it : 
+And use it :
 
 ```jsx
-const App = () => 
+const App = () => (
   <SpotlightWithTooltip
     isActive
     inheritParentBackgroundColor
@@ -97,32 +95,118 @@ const App = () =>
     }}
   >
     <Title>Spotlight</Title>
-  </SpotlightWithTooltip>;
-
+  </SpotlightWithTooltip>
+);
 ```
 
 ## Spotlight API
 
-| Property                                    | Description                                                                                                                                                                                                                           | Type             | Default |
-| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ------- |
-| isActive                                    | Whether the component is enabled or disabled.                                                                                                                                                                                         | Boolean          | false   |
-| children                                    | Component(s) to have spotlight effect.                                                                                                                                                                                                | Node(s)          | null    |
-| renderLabel                                 | Funtion to return Component(s) to be rendered over backdrop.                                                                                                                                                                          | Funtion          | null    |
-| zIndex                                      | Z index of backdrop and wrapped component. It will override the css class style with inline style.                                                                                                                                    | Number or String | 1000    |
-| backdropColor                               | Color of backdrop. It will override the css class style with inline style.                                                                                                                                                            | String           | #000000 |
-| backdropOpacity                             | Opacity of backdrop. It will override the css class style with inline style.                                                                                                                                                          | Number           | 0.7     |
-| inheritParentBackgroundColor (Experimental) | Resursively search for parent background color in case you don't want your component to inherit color of backdrop. This is useful when you wrap functional component with Spotlight where there is no real Dom element to give style. | Boolean          | false   |
-| enableShadow                                | Gives shadow around wrapped component .                                                                                                                                                                                               | Boolean          | false   |
-| style                                       | Inline style for wrapped component when spotlight is actived                                                                                                                                                                          | Object           | null    |
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>isActive</td>
+      <td>Whether the component is enabled or disabled.</td>
+      <td>Boolean</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <td>children</td>
+      <td>Component(s) to have spotlight effect.</td>
+      <td>Node(s)</td>
+      <td>null</td>
+    </tr>
+    <tr>
+      <td>renderLabel</td>
+      <td>Function to return Component(s) to be rendered over backdrop.</td>
+      <td>Function</td>
+      <td>null</td>
+    </tr>
+    <tr>
+      <td>zIndex</td>
+      <td>Z index of backdrop and wrapped component.</td>
+      <td>Number or String</td>
+      <td>1000</td>
+    </tr>
+    <tr>
+      <td>backdropColor</td>
+      <td>Color of backdrop.</td>
+      <td>String</td>
+      <td>#000000</td>
+    </tr>
+    <tr>
+      <td>backdropOpacity</td>
+      <td>Opacity of backdrop.</td>
+      <td>Number</td>
+      <td>0.7</td>
+    </tr>
+    <tr>
+      <td>inheritParentBackgroundColor</td>
+      <td>Recursively search for parent background color in case you don't want your component to inherit color of
+        backdrop. This is useful when your component is transparent and inherits backdrops color.</td>
+      <td>Boolean</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <td>enableShadow</td>
+      <td>Gives shadow around wrapped component .</td>
+      <td>Boolean</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <td>style</td>
+      <td>Inline style for wrapped component when spotlight is actived</td>
+      <td>Object</td>
+      <td>null</td>
+    </tr>
+  </tbody>
+</table>
 
 ## LabelWrapper API
 
-| Property | Description                                                                                        | Type             | Default |
-| -------- | -------------------------------------------------------------------------------------------------- | ---------------- | ------- |
-| children | Component(s) to have spotlight effect.                                                             | Node(s)          | null    |
-| zIndex   | Z index of backdrop and wrapped component. It will override the css class style with inline style. | Number or String | 1000    |
-| center   | Centers label of wrapped                                                                           | Boolean          | false   |
-| style    | Inline style for label                                                                             | Object           | null    |
+<table>
+  <thead>
+    <tr >
+      <th>Property</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>children</td>
+      <td>Component(s) to have spotlight effect.</td>
+      <td>Node(s)</td>
+      <td>null</td>
+    </tr>
+    <tr>
+      <td>zIndex</td>
+      <td>Z index of backdrop and wrapped component.</td>
+      <td>Number or String</td>
+      <td>1000</td>
+    </tr>
+    <tr>
+      <td>center</td>
+      <td>Centers label</td>
+      <td>Boolean</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <td>style</td>
+      <td>Inline style for label</td>
+      <td>Object</td>
+      <td>null</td>
+    </tr>
+  </tbody>
+</table>
 
 ## License
 
