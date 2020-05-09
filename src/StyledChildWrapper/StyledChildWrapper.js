@@ -84,4 +84,8 @@ StyledChildWrapper.propTypes = {
   inheritParentBackgroundColor: PropTypes.bool
 };
 
+StyledChildWrapper.defaultProps = {
+  inheritParentBackgroundColor: true
+};
+
 export default StyledChildWrapper;
