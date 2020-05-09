@@ -150,7 +150,7 @@ const App = () => (
     <tr>
       <td>inheritParentBackgroundColor</td>
       <td>Recursively search for parent background color in case you don't want your component to inherit color of
-        backdrop. This prop prevent your component to inherit backdrop color in case it is transparent.</td>
+        backdrop. This prop prevent transparent component to inherit backdrop color.</td>
       <td>Boolean</td>
       <td>true</td>
     </tr>
