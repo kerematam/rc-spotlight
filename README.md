@@ -145,7 +145,7 @@ const App = () => (
       <td>backdropOpacity</td>
       <td>Opacity of backdrop.</td>
       <td>Number</td>
-      <td>0.7</td>
+      <td>0.8</td>
     </tr>
     <tr>
       <td>inheritParentBackgroundColor</td>
