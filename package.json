@@ -57,5 +57,14 @@
   },
   "files": [
     "dist"
+  ],
+  "keywords": [
+    "spotlight",
+    "react",
+    "highlight",
+    "backdrop",
+    "overlay",
+    "training",
+    "showcase"
   ]
 }
