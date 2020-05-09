@@ -12,7 +12,9 @@
 npm install --save rc-spotlight
 ```
 
-# Demo
+# Demo 
+
+[![Edit react-counter-input](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-spotlight-example-zsi2j)
 
 ![Image description](docs/images/showcase.gif)
 
