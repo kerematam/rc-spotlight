@@ -86,7 +86,6 @@ And use it :
 const App = () => (
   <SpotlightWithTooltip
     isActive
-    inheritParentBackgroundColor
     toolTipPlacement="right"
     toolTipTitle={"You can use Antd Tooltip"}
     style={{
