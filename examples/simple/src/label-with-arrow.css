@@ -1,0 +1,34 @@
+
+.label-text {
+  font-family: Ubuntu;
+  color: white;
+}
+
+.label-text.position {
+  position: absolute;
+  width: 300px;
+  left: 120px;
+  top: 10px;
+}
+
+.label-text.title {
+  font-size: 32px;
+}
+
+.arrow-image {
+  -webkit-transform: scaleX(-1);
+  transform: rotate(200deg);
+  width: 200px;
+}
+
+.arrow-image.position {
+  position: absolute;
+  left: -30px;
+  top: -20px;
+}
+
+.label-container {
+  display: flex;
+  -webkit-flex-flow: wrap row;
+  flex-flow: wrap row;
+}

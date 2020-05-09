@@ -32,11 +32,12 @@ const App = () => {
   const [input, setInput] = useState();
 
   useEffect(() => {
-    setInterval(function() {
+    const interval = setInterval(function() {
       setBackdropIndex(backdropIndex =>
         backdropIndex === 4 ? 1 : backdropIndex + 1
       );
     }, 2000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
