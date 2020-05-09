@@ -27,7 +27,7 @@ import Spotlight from "rc-spotlight";
 class Example extends Component {
   render() {
     return (
-      <Spotlight isActive renderLabel={<h1>This is backdrop view</h1>}>
+      <Spotlight isActive label={<h1>This is backdrop view</h1>}>
         <div>Content with Spotlight Effect</div>
       </Spotlight>
     );
@@ -48,7 +48,7 @@ const BackdropText = text => (
 );
 
 const App = () => (
-  <Spotlight isActive renderLabel={BackdropText("This is title")}>
+  <Spotlight isActive label={BackdropText("This is title")}>
     <h1>Spotlight</h1>
   </Spotlight>
 );
@@ -125,9 +125,9 @@ const App = () => (
       <td>null</td>
     </tr>
     <tr>
-      <td>renderLabel</td>
-      <td>Function to return Component(s) to be rendered over backdrop.</td>
-      <td>Function</td>
+      <td>label</td>
+      <td>Component(s) to be rendered over backdrop.</td>
+      <td>Node(s)</td>
       <td>null</td>
     </tr>
     <tr>

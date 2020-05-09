@@ -6,7 +6,7 @@ import StyledChildWrapper from "./StyledChildWrapper";
 const Spotlight = ({
   children,
   isActive,
-  renderLabel,
+  label,
   zIndex,
   backdropOpacity,
   backdropColor,
@@ -30,7 +30,7 @@ const Spotlight = ({
           {child}
         </StyledChildWrapper>
       ))}
-      <div style={{ ...(zIndex && { zIndex }) }}>{renderLabel}</div>
+      {label && <div style={{ ...(zIndex && { zIndex }) }}>{label}</div>}
       <Backdrop
         zIndex={zIndex}
         opacity={backdropOpacity}
@@ -47,7 +47,10 @@ Spotlight.propTypes = {
     PropTypes.node
   ]),
   isActive: PropTypes.bool,
-  renderLabel: PropTypes.func,
+  label: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]),
   zIndex: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   backdropOpacity: PropTypes.string,
   backdropColor: PropTypes.string,

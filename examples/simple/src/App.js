@@ -58,7 +58,7 @@ const App = () => {
     <div className="container">
       <Spotlight
         isActive={1 === backdropIndex}
-        renderLabel={renderLabelWithArrow({
+        label={renderLabelWithArrow({
           title: "This is title",
           body: bodyText
         })}
@@ -67,7 +67,7 @@ const App = () => {
       </Spotlight>
       <Spotlight
         isActive={2 === backdropIndex}
-        renderLabel={renderLabel({
+        label={renderLabel({
           text: "This is subtitle",
           isCentered: false
         })}
@@ -77,7 +77,7 @@ const App = () => {
       </Spotlight>
       <Spotlight
         isActive={3 === backdropIndex}
-        renderLabel={renderLabelOnCenter({ text: "This is text input" })}
+        label={renderLabelOnCenter({ text: "This is text input" })}
       >
         <input
           value={input}
