@@ -29,7 +29,7 @@ const renderLabelOnCenter = ({ text }) => (
 const renderLabelWithArrow = ({ title, body }) => (
   <LabelWrapper>
     <div className="label-container">
-      <img className="arrow-image position" src={arrow} />
+      <img className="arrow-image position" src={arrow} alt="arrow"/>
       <div className="label-text position">
         <div className="label-text title">{title}</div>
         <div className="label-text">{body}</div>
